@@ -10,5 +10,18 @@ app.get('/',(req,res)=>{
    });
 });
 
+app.get('/users',(req,res)=>{
+    res.status(200).send([{
+        name: 'Pepik Vlastiku',
+        age: 55
+    },{
+        name: 'Pepik Ondricku',
+        age: 65
+    },{
+        name: 'Tomik',
+        age: 99
+    }])
+});
+
 app.listen(3000);
 module.exports.app = app;
