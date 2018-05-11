@@ -1,13 +1,19 @@
 const expect  = require('expect');
 const utils = require('./utils');
-it('should add two numbers', () =>{
-  var res = utils.add(33,11);
 
-//   if (res !== 44) 
-//   {  throw new Error(`Očekávalo se 44, ale dostalo se ${res}`)
-// }
+
+describe('Utils',()=>{
+
+
+describe('#add',()=>{
+ it('should add two numbers', () =>{
+  var res = utils.add(33,11);
+ 
+ 
      expect(res).toBe(44).toBeA('number');
 });
+})    
+
 
 it('should async add two numbers',(done)=>{
    utils.asyncAdd(4,3,(sum)=>{
@@ -58,3 +64,9 @@ it ('Je nastaveno jmeno a prijmeni',()=>{
     });
     
 });
+  
+});
+
+//   if (res !== 44) 
+//   {  throw new Error(`Očekávalo se 44, ale dostalo se ${res}`)
+// }
